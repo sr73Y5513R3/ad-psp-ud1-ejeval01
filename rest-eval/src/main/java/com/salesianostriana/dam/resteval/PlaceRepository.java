@@ -16,7 +16,10 @@ public class PlaceRepository {
 
     @PostConstruct
     public void init() {
-        // Añadir aquí datos de ejemplo
+        add(Place.builder().name("Bar 1").desc("Bar en triana").image(null).address("Avenida López de Gomara, nº23")
+                .coords("longitud: 100382 latitud: 1029109").build());
+        add(Place.builder().name("Bar 2").desc("Bar en los remedios").image(null).address("Otra calle, nº12")
+                .coords("longitud: 1234d latitud: 478a7cd").build());
     }
 
     public Place add(Place place) {
